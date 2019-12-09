@@ -1,6 +1,6 @@
 let possibleDirs = ["left", "right", "forward"];
 
-let numOfDirs = 5;
+let numOfDirs = 8;
 
 let tDir = "";
 
@@ -29,6 +29,8 @@ function setup() {
   intro1 = createP("Today, if you'd like, you'll go on a walk. You can start wherever you are right now, just walk outisde");
 
   intro2 = createP("Below is a set of directions, each time you arrive at an intersection\, turn in the direction of the next item on the list, and tap the screen to cross it off");
+
+  createP("If you can't complete the direction at the next intersection, continue straight until you can, or follow the simplest path you see");
 
 
 
@@ -63,10 +65,10 @@ function createSubmit() {
 
   input.style("box-sizing", "border-box");
 
-  input.style("font-size", "20px");
+  //input.style("font-size", "20px");
 
   input.style("font-family", "Georgia");
-  input.style("font-size", "1.5em");
+  input.style("font-size", "1.2em");
 
   input.style("border-radius", "20px");
 
@@ -100,7 +102,7 @@ function createSubmit() {
   subButton.style("padding", "30px 40px");
 
   subButton.style("font-family", "Georgia");
-  subButton.style("font-size", "1.5em");
+  subButton.style("font-size", "1.2em");
 
 }
 
@@ -205,6 +207,12 @@ function displayPrevious() {
   for (let i = 0; i < previousDescriptions.length; i++) {
     let myP = createP("\"" + previousDescriptions[i].description + "\"");
     myP.style("text-align", "center")
+    myP.style("font-size", "1.2em");
+    let delineator = createP("-----");
+
+    delineator.style("text-align", "center");
+    delineator.style("font-size", "1.2em");
+
   }
 }
 
